@@ -2,7 +2,6 @@ import SunIcon from "./../img/sun.png";
 // import SunnyDay from "./../img/sunnyday.jpg";
 import CloudyIcon from "./../img/cloudy.png";
 import RainyIcon from "./../img/storm.png";
-import { useState } from "react";
 
 const WeatherIcon = function (props) {
   const { weather } = props;
@@ -12,17 +11,15 @@ const WeatherIcon = function (props) {
 
   if (weather === "Clear") {
     weatherImage = SunIcon;
-    // weatherBackground = SunnyDay;
-  } else if (weather === "cloudy") {
+  } else if (weather === "Clouds") {
     weatherImage = CloudyIcon;
-  } else if (weather === "rainy") {
+  } else if (weather === "Rain") {
     weatherImage = RainyIcon;
   }
 
   return (
     <div>
-      <h1>{weather}</h1>
-      <img src={weatherImage} alt={weather} />
+      <img className="w-12 h-12" src={weatherImage} alt={weather} />
     </div>
   );
 };
