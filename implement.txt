@@ -1,0 +1,20 @@
+1. 
+Getting info from weather map API
+    -Every hour/4hr/12hr/24hr -> FREE : 3hour for 5 days (done)
+    -Temperature (done)
+    -Wind (done)
+    -Sunny/rainy (done)
+    -Finishing the layout (done)
+
+2.
+    - Sync sunny/cloudy/rainy with images + background (done)
+    - Search location (done)
+    - Getting information (every 3h for next 5 days) (done)
+    - Getting the input location (done)
+    - Getting location and info for local (based on location API) (done)
+    - Render the new location (done)
+
+/// Refactoring 
+
+Classes and style into the css file
+Getting the next 5 days into weatherAPI.js
