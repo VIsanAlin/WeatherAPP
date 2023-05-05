@@ -4,10 +4,14 @@ import WeatherIcon from "./weatherIcon";
 const MultipleWeather = () => {
   const [multipleWeatherData, setMultipleWeatherData] = useState(null);
 
+  //
+  const [lat, setLat] = useState("44.4323");
+  const [lon, setLon] = useState("26.1063");
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://api.openweathermap.org/data/2.5/forecast?lat=44.4323&lon=26.1063&appid=9ed4d0eab80ab31d905bafb34edf87da"
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9ed4d0eab80ab31d905bafb34edf87da`
       );
 
       const data = await response.json();
@@ -16,7 +20,7 @@ const MultipleWeather = () => {
       setMultipleWeatherData(data);
     };
     fetchData();
-  }, []);
+  }, [lat, lon]);
 
   if (!multipleWeatherData) return console.log("No data");
 
